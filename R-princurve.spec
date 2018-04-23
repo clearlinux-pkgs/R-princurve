@@ -4,7 +4,7 @@
 #
 Name     : R-princurve
 Version  : 1.1.12
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/princurve_1.1-12.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/princurve_1.1-12.tar.gz
 Summary  : Fits a Principal Curve in Arbitrary Dimension
