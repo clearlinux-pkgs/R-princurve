@@ -1,6 +1,7 @@
-2.1.1
-R-pkgconfig
-R-ggplot2
-R-Rcpp
-R-dplyr
+2.1.2
 R-tidyr
+R-pkgconfig
+R-magick
+R-dplyr
+R-Rcpp
+R-ggplot2
