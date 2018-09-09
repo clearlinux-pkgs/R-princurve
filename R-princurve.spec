@@ -4,22 +4,20 @@
 #
 Name     : R-princurve
 Version  : 2.1.2.1
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/princurve_2.1.2.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/princurve_2.1.2.1.tar.gz
 Summary  : Fits a Principal Curve in Arbitrary Dimension
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: R-princurve-lib
-Requires: R-Rcpp
-Requires: R-dplyr
-Requires: R-ggplot2
-Requires: R-magick
-Requires: R-pkgconfig
-Requires: R-tidyr
+Requires: R-evaluate
+Requires: R-labeling
 BuildRequires : R-Rcpp
 BuildRequires : R-dplyr
+BuildRequires : R-evaluate
 BuildRequires : R-ggplot2
+BuildRequires : R-labeling
 BuildRequires : R-magick
 BuildRequires : R-pkgconfig
 BuildRequires : R-tidyr
@@ -46,11 +44,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1533222098
+export SOURCE_DATE_EPOCH=1536456233
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1533222098
+export SOURCE_DATE_EPOCH=1536456233
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

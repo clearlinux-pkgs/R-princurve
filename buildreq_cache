@@ -1,7 +1,9 @@
 2.1.2.1
-R-dplyr
-R-pkgconfig
-R-magick
-R-ggplot2
-R-tidyr
 R-Rcpp
+R-dplyr
+R-evaluate
+R-ggplot2
+R-labeling
+R-magick
+R-pkgconfig
+R-tidyr
