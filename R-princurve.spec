@@ -4,15 +4,21 @@
 #
 Name     : R-princurve
 Version  : 2.1.3
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/princurve_2.1.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/princurve_2.1.3.tar.gz
 Summary  : Fits a Principal Curve in Arbitrary Dimension
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: R-princurve-lib = %{version}-%{release}
-Requires: R-Rcpp
 BuildRequires : R-Rcpp
+BuildRequires : R-dplyr
+BuildRequires : R-evaluate
+BuildRequires : R-ggplot2
+BuildRequires : R-labeling
+BuildRequires : R-magick
+BuildRequires : R-pkgconfig
+BuildRequires : R-tidyr
 BuildRequires : buildreq-R
 
 %description
@@ -41,11 +47,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538995145
+export SOURCE_DATE_EPOCH=1552782003
 
 %install
+export SOURCE_DATE_EPOCH=1552782003
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1538995145
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -80,8 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library princurve|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  princurve || :
 
 
 %files
@@ -109,7 +114,12 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/princurve/help/princurve.rdx
 /usr/lib64/R/library/princurve/html/00Index.html
 /usr/lib64/R/library/princurve/html/R.css
-/usr/lib64/R/library/princurve/libs/symbols.rds
+/usr/lib64/R/library/princurve/tests/testthat.R
+/usr/lib64/R/library/princurve/tests/testthat/test-legacy_princurve.R
+/usr/lib64/R/library/princurve/tests/testthat/test-principal_curve.R
+/usr/lib64/R/library/princurve/tests/testthat/test-project_to_curve.R
+/usr/lib64/R/library/princurve/tests/testthat/test-smoother_functions.R
+/usr/lib64/R/library/princurve/tests/testthat/test-start_circle.R
 
 %files lib
 %defattr(-,root,root,-)
